@@ -9,7 +9,12 @@ import javax.persistence.GenerationType;
  * <!--  end-user-doc  -->
  * @generated
  */
- 
+/**
+ * @Author: huang
+ * @Description: 角色资源中间表
+ * @Date: Created in 16:32 2018-01-30  .
+ * @Modified by:
+ */
 @javax.persistence.Entity 
 public class RoleAssResource
 {

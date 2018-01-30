@@ -12,7 +12,7 @@ import javax.persistence.GenerationType;
  */
 
 /**
- * @Author: 黄丽华
+ * @Author: huang
  * @Description: 评阅人评审表
  * @Date: Created in 13:50 2018-01-30  .
  * @Modified by:
