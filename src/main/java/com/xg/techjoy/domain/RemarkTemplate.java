@@ -29,29 +29,29 @@ public abstract class RemarkTemplate {
     protected Long id;
 
     /*评语名称*/
-    @javax.persistence.Column(nullable = false)
+    @Column(nullable = false)
     protected String title;
 
     /*评语类型*/
-    @javax.persistence.Column(nullable = false)
+    @Column(nullable = false)
     protected String category;
 
     /*是否是默认模板*/
-    @javax.persistence.Column(nullable = false)
+    @Column(nullable = false)
     protected Boolean defaultRemarkTemplate;
 
     /*模板项*/
-    @javax.persistence.OneToMany(mappedBy = "remakeTemplate")
+    @OneToMany(mappedBy = "remakeTemplate")
     protected Set<RemarkTemplateItem> remarkTemplateItems;
 
     /*指导老师*/
-    @javax.persistence.ManyToOne
-    @javax.persistence.JoinColumn(nullable = false)
+    @ManyToOne
+    @JoinColumn(nullable = false)
     protected Supervisor supervisor;
 
     /*教研室*/
-    @javax.persistence.ManyToOne
-    @javax.persistence.JoinColumn(nullable = false)
+    @ManyToOne
+    @JoinColumn(nullable = false)
     protected Department department;
 
 

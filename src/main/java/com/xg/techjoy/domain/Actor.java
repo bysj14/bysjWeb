@@ -30,11 +30,11 @@ public abstract class Actor {
     protected Long id;
 
     /*名字*/
-    @javax.persistence.Column(nullable = false)
+    @Column(nullable = false)
     protected String name;
 
     /*用户*/
-    @javax.persistence.OneToOne(mappedBy = "actor")
+    @OneToOne(mappedBy = "actor")
     protected User user;
 
     public Actor() {

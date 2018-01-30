@@ -29,105 +29,105 @@ public abstract class GraduateProject
 	protected Long id;
 
 	/*题目名称*/
-	@javax.persistence.Column(nullable = false) 
+	@Column(nullable = false)
 	protected String title;
 
 	/*副标题*/
-	@javax.persistence.Column(nullable = false) 
+	@Column(nullable = false)
 	protected String subTitle;
 
 	/*年份*/
-	@javax.persistence.Column(nullable = false) 
+	@Column(nullable = false)
 	protected String year;
 
 	/*设计/论文工作内容*/
-	@javax.persistence.Column(nullable = false) 
+	@Column(nullable = false)
 	protected String content;
 
 	/*设计/论文基本需求*/
-	@javax.persistence.Column(nullable = false) 
+	@Column(nullable = false)
 	protected String requirements;
 
 	/*所需基本技能*/
-	@javax.persistence.Column(nullable = false) 
+	@Column(nullable = false)
 	protected String basicString;
 
 	/*主要参考资料及参考文献*/
-	@javax.persistence.Column(nullable = false) 
+	@Column(nullable = false)
 	protected String reference;
 
 	/*提交状态*/
-	@javax.persistence.Column(nullable = false) 
+	@Column(nullable = false)
 	protected Boolean submited;
 
 	/*终稿*/
-	@javax.persistence.Column(nullable = false) 
+	@Column(nullable = false)
 	protected String outcomeReport;
 
 	/*指导关系*/
-	@javax.persistence.OneToMany(mappedBy = "graduateProject") 
+	@OneToMany(mappedBy = "graduateProject")
 	protected Set<Supervision> supervisions;
 
 	/*学生*/
-	@javax.persistence.OneToOne(mappedBy = "graduateProject") 
+	@OneToOne(mappedBy = "graduateProject")
 	protected Student student;
 
 	/*校优秀论文*/
-	@javax.persistence.OneToOne 
+	@OneToOne
 	protected ExcellentGraduateProjectOfUni excellentGraduateProjectOfUni;
 
 	/*答辩小组意见表*/
-	@javax.persistence.OneToOne(mappedBy = "graduateProject") 
+	@OneToOne(mappedBy = "graduateProject")
 	protected QuestionerTeamReport questionerTeamReport;
 
 	/*评阅人评审表*/
-	@javax.persistence.OneToOne(mappedBy = "graduateProject") 
+	@OneToOne(mappedBy = "graduateProject")
 	protected ReviewReport reviewReport;
 
 	/*指导老师评审表*/
-	@javax.persistence.OneToOne 
+	@OneToOne
 	protected EvaluationReport evaluationReport;
 
 	/*工作进程表*/
-	@javax.persistence.OneToMany(mappedBy = "graduateProject") 
+	@OneToMany(mappedBy = "graduateProject")
 	protected Set<Schedule> schedules;
 
 	/**/
-	@javax.persistence.OneToMany(mappedBy = "graduateProject") 
+	@OneToMany(mappedBy = "graduateProject")
 	protected Set<ProgressReport> progressReports;
 
 	/*任务书*/
-	@javax.persistence.OneToOne(mappedBy = "graduateProject") 
+	@OneToOne(mappedBy = "graduateProject")
 	protected MissionDoc missionDoc;
 
 	/*教研室主任审核*/
-	@javax.persistence.ManyToOne 
-	@javax.persistence.JoinColumn(nullable = false) 
+	@ManyToOne
+	@JoinColumn(nullable = false)
 	protected Approval approvalFromDirector;
 
 	/*评阅人*/
-	@javax.persistence.ManyToOne 
-	@javax.persistence.JoinColumn(nullable = false) 
+	@ManyToOne
+	@JoinColumn(nullable = false)
 	protected Supervisor reviewer;
 
 	/*指导老师*/
-	@javax.persistence.ManyToOne 
-	@javax.persistence.JoinColumn(nullable = false) 
+	@ManyToOne
+	@JoinColumn(nullable = false)
 	protected Supervisor proposer;
 
 	/*题目类型*/
-	@javax.persistence.ManyToOne 
-	@javax.persistence.JoinColumn(nullable = false) 
+	@ManyToOne
+	@JoinColumn(nullable = false)
 	protected GraduateProjectType graduateProjectType;
 
 	/*题目来源*/
-	@javax.persistence.ManyToOne 
-	@javax.persistence.JoinColumn(nullable = false) 
+	@ManyToOne
+	@JoinColumn(nullable = false)
 	protected GraduateProjectFrom graduateProjectFrom;
 
 	/*题目性质*/
-	@javax.persistence.ManyToOne 
-	@javax.persistence.JoinColumn(nullable = false) 
+	@ManyToOne
+	@JoinColumn(nullable = false)
 	protected GraduateProjectNature graduateProjectNature;
 
 
